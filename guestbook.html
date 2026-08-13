@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>추천 · 방명록 - 포토스팟</title>
+</head>
+
+<body bgcolor="#ffffff" text="#333333" link="#1a4f8b" vlink="#1a4f8b">
+
+<a id="top"></a>
+
+<!-- ============ 1. 로고 / 제목 ============ -->
+<table width="1000" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center">
+      <h1><font color="#1a4f8b" size="7">PHOTO</font><font color="#d1495b" size="7">SPOT</font></h1>
+      <p><b>추천 &middot; 방명록</b> &nbsp;|&nbsp; 여러분이 아는 사진 명당을 알려 주세요</p>
+    </td>
+  </tr>
+</table>
+
+<!-- ============ 2. 메뉴 바 ============ -->
+<table width="1000" align="center" border="0" cellpadding="8" cellspacing="1" bgcolor="#ffffff">
+  <tr align="center">
+    <td width="12%" bgcolor="#f0c419"><a href="index.html"><b>홈으로</b></a></td>
+    <td width="12%" bgcolor="#f0c419"><a href="spots.html#dosim"><b>도심</b></a></td>
+    <td width="12%" bgcolor="#f0c419"><a href="spots.html#hangang"><b>한강</b></a></td>
+    <td width="12%" bgcolor="#f0c419"><a href="spots.html#view"><b>전망</b></a></td>
+    <td width="12%" bgcolor="#f0c419"><a href="spots.html#gamsung"><b>감성</b></a></td>
+    <td width="12%" bgcolor="#f0c419"><a href="index.html#gallery"><b>사진첩</b></a></td>
+    <td width="14%" bgcolor="#f0c419"><a href="spots.html#tip"><b>촬영 팁</b></a></td>
+    <td width="14%" bgcolor="#d1495b"><a href="guestbook.html"><font color="#ffffff"><b>추천 · 방명록</b></font></a></td>
+  </tr>
+</table>
+
+<br>
+
+<!-- ============ 3. 추천 양식 ============ -->
+<table width="1000" align="center" border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td>
+      <h2><font color="#1a4f8b">포토스팟 추천하기</font></h2>
+      <hr>
+
+      <form method="post" action="#" autocomplete="off">
+
+        <fieldset>
+          <legend><b>작성자 정보</b></legend>
+          <table border="0" cellpadding="6" cellspacing="0">
+            <tr>
+              <td width="120"><label for="user_name">이름</label></td>
+              <td><input type="text" id="user_name" name="user_name" size="20" maxlength="10"></td>
+            </tr>
+            <tr>
+              <td><label for="user_email">이메일</label></td>
+              <td><input type="email" id="user_email" name="user_email" size="30"></td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend><b>추천 장소</b></legend>
+          <table border="0" cellpadding="6" cellspacing="0">
+            <tr>
+              <td width="120"><label for="place">장소 이름</label></td>
+              <td><input type="text" id="place" name="place" size="30"></td>
+            </tr>
+            <tr>
+              <td><label for="area">지역</label></td>
+              <td>
+                <select id="area" name="area">
+                  <option value="dosim" selected>도심</option>
+                  <option value="hangang">한강</option>
+                  <option value="view">전망</option>
+                  <option value="gamsung">감성</option>
+                  <option value="etc">기타</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="visit_date">방문한 날짜</label></td>
+              <td><input type="date" id="visit_date" name="visit_date"></td>
+            </tr>
+            <tr>
+              <td><label for="best_time">가장 예쁜 시간</label></td>
+              <td><input type="time" id="best_time" name="best_time"></td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend><b>촬영 정보</b></legend>
+          <p><b>어떤 사진이 잘 나오나요?</b> (여러 개 선택 가능)</p>
+          <p>
+            <label><input type="checkbox" name="type" value="person"> 인물</label> &nbsp;
+            <label><input type="checkbox" name="type" value="night"> 야경</label> &nbsp;
+            <label><input type="checkbox" name="type" value="nature"> 자연 · 풍경</label> &nbsp;
+            <label><input type="checkbox" name="type" value="food"> 음식 · 카페</label>
+          </p>
+          <p><b>촬영 장비</b></p>
+          <p>
+            <label><input type="radio" name="gear" value="phone" checked> 휴대폰</label> &nbsp;
+            <label><input type="radio" name="gear" value="camera"> 카메라</label>
+          </p>
+          <p><b>추천 점수</b></p>
+          <p><label for="score">별로 <input type="range" id="score" name="score" min="1" max="5" value="4"> 최고</label></p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend><b>한마디</b></legend>
+          <p><label for="memo">촬영 팁을 적어 주세요</label></p>
+          <p><textarea id="memo" name="memo" cols="60" rows="5"></textarea></p>
+          <p><label for="photo">사진 첨부</label> <input type="file" id="photo" name="photo"></p>
+        </fieldset>
+
+        <br>
+
+        <p align="center">
+          <button type="submit">추천 등록</button> &nbsp;
+          <button type="reset">다시 쓰기</button>
+        </p>
+
+        <p><font size="2" color="#777777">※ 이 양식은 수업에서 배운 폼 태그로 만든 화면입니다. 실제 저장은 서버 프로그램(JSP 등)이 있어야 동작합니다.</font></p>
+
+      </form>
+    </td>
+  </tr>
+</table>
+
+<!-- ============ 4. 방명록 (지금까지 올라온 추천) ============ -->
+<table width="1000" align="center" border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td>
+      <h2><font color="#1a4f8b">지금까지 올라온 추천</font></h2>
+      <hr>
+
+      <table width="100%" border="1" cellpadding="8" cellspacing="0" bordercolor="#cccccc">
+        <thead>
+          <tr align="center" bgcolor="#1a4f8b">
+            <th width="60"><font color="#ffffff">번호</font></th>
+            <th width="150"><font color="#ffffff">장소</font></th>
+            <th width="80"><font color="#ffffff">지역</font></th>
+            <th><font color="#ffffff">한마디</font></th>
+            <th width="100"><font color="#ffffff">작성자</font></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">3</td>
+            <td>선유도공원</td>
+            <td align="center">한강</td>
+            <td>담쟁이 덮인 옛 정수장 벽이 배경으로 좋아요.</td>
+            <td align="center">김○○</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>하늘공원</td>
+            <td align="center">전망</td>
+            <td>가을 억새 시기에 해 질 무렵 가면 최고입니다.</td>
+            <td align="center">이○○</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>덕수궁 돌담길</td>
+            <td align="center">도심</td>
+            <td>비 오는 날 우산 쓰고 찍으면 예뻐요.</td>
+            <td align="center">박○○</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr bgcolor="#fdf6e3">
+            <td colspan="5" align="center"><font size="2">1</font></td>
+          </tr>
+        </tfoot>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- ============ 5. 꼬리말 ============ -->
+<hr>
+<table width="1000" align="center" border="0" cellpadding="10" cellspacing="0">
+  <tr align="center">
+    <td>
+      <font size="2">
+        강남대학교 K-MOVE 스쿨 HTML 실습 &middot; 미니 홈페이지 과제<br>
+        <a href="index.html">홈으로</a> |
+        <a href="spots.html">스팟 소개</a> |
+        <a href="guestbook.html">추천 · 방명록</a> |
+        <a href="#top">맨 위로</a>
+      </font>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
